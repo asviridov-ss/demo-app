@@ -20,8 +20,6 @@ metadata:
     {{- include "test-chart.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
-    networking.gke.io/managed-certificates: {{ $fullName }}
-    networking.gke.io/v1beta1.FrontendConfig: {{ $fullName }}
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:

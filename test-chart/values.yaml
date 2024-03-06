@@ -1,6 +1,8 @@
 # Default values for test-chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+global:
+  domain: "test.genai.samp.solutions"
 
 replicaCount: 1
 
@@ -47,17 +49,18 @@ server:
   name: server
 
 ingress:
+  #hostname: "test.genai.samp.solutions"
   enabled: true
   className: ""
   annotations:
-    networking.gke.io/managed-certificates: demo-app-test-chart
-    networking.gke.io/v1beta1.FrontendConfig: demo-app-test-chart
+    networking.gke.io/managed-certificates: test-chart
+    networking.gke.io/v1beta1.FrontendConfig: test-chart
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: test.genai.samp.solutions
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+      - test.genai.samp.solutions
+      # paths:
+      #   - path: /
+      #     pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

@@ -3,6 +3,7 @@ apiVersion: networking.gke.io/v1beta1
 kind: FrontendConfig
 metadata:
   name: {{ include "test-chart.fullname" . }}
+  namespace: "default"
 spec:
   redirectToHttps:
     enabled: true

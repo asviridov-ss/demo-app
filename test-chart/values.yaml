@@ -56,8 +56,8 @@ ingress:
     networking.gke.io/managed-certificates: demo-app-test-chart
     networking.gke.io/v1beta1.FrontendConfig: demo-app-test-chart
     # kubernetes.io/tls-acme: "true"
-  hosts:
-      - test.genai.samp.solutions
+  # hosts:
+  #     - test.genai.samp.solutions
   path: /
   pathType: Prefix
   tls: []

@@ -1,11 +1,10 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "test-chart.fullname" . -}}
-{{- $domain := .Values.global.domain -}}
 apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:
   name: {{ include "test-chart.fullname" . }}
 spec:
   domains:
-    - {{ $domain }}
+    - "test.genai.samp.solutions"
 {{- end }}

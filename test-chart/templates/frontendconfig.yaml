@@ -1,0 +1,11 @@
+{{- if .Values.ingress.enabled -}}
+apiVersion: networking.gke.io/v1beta1
+kind: FrontendConfig
+metadata:
+  name: {{ include "test-chart.fullname" . }}
+  namespace: "default"
+spec:
+  redirectToHttps:
+    enabled: true
+  sslPolicy: tls-1-2-policy
+{{- end }}

@@ -59,7 +59,7 @@ ingress:
   # hosts:
   #     - test.genai.samp.solutions
   path: /
-  pathType: Prefix
+  pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

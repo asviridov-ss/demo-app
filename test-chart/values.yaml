@@ -50,8 +50,8 @@ ingress:
   enabled: true
   className: ""
   annotations:
-    networking.gke.io/managed-certificates: test-chart
-    networking.gke.io/v1beta1.FrontendConfig: test-chart
+    # networking.gke.io/managed-certificates: test-chart
+    # networking.gke.io/v1beta1.FrontendConfig: test-chart
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: test.genai.samp.solutions

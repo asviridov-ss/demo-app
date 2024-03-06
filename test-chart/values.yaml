@@ -54,10 +54,11 @@ ingress:
     networking.gke.io/v1beta1.FrontendConfig: demo-app-test-chart
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: test.genai.samp.solutions
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+    - "test.genai.samp.solutions"
+    # - host: test.genai.samp.solutions
+    #   paths:
+    #     - path: /
+    #       pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

@@ -55,9 +55,9 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: test.genai.samp.solutions
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+      # paths:
+      #   - path: /
+      #     pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

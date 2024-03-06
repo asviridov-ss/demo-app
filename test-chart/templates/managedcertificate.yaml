@@ -4,7 +4,6 @@ apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:
   name: {{ include "test-chart.fullname" . }}
-  namespace: "default"
 spec:
   domains:
     - "test.genai.samp.solutions"
